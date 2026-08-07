@@ -1,0 +1,33 @@
+מכיוון שהמטרה שלך היא לאמן מודל AI (בין אם עבור Fine-Tuning או עבור מערכת RAG) בצורה חינמית לחלוטין ופתוחה לציבור, המקורות הטובים ביותר הם מאגרי נתונים מחקריים (Datasets) שכבר נאספו, נוקו ועובדו לפורמטים קריאי-מחשב (כמו CSV או JSON).
+מאגרים אלו זמינים להורדה חופשית ופתוחה:
+## 1. מאגר HDIDataset ב-GitHub
+
+* מה זה: פרויקט קוד פתוח ייעודי (Herb-Drug Interaction Dataset) שנוצר על ידי חוקרים כדי לאמן מודלים של בינה מלאכותית לזיהוי ישויות (NER) ואינטראקציות בין צמחים לתרופות.
+* מה הוא מכיל: משפטים מתויגים מתוך מאות מאמרים רפואיים, הכוללים שמות צמחים, תרופות, מחלות, והקשרים פרמקולוגיים.
+* איך מורידים: ניתן להוריד את הקבצים ישירות בחינם מחשבון ה-GitHub של הפרויקט: [ancnudde/HDIDataset](https://github.com/ancnudde/HDIDataset). [1, 2] 
+
+## 2. מאגר "Herb Drug Interaction" בפלטפורמת Kaggle
+
+* מה זה: קובץ נתונים מובנה בפורמט CSV שהועלה לפלטפורמת מחקר ה-AI הגדולה בעולם.
+* מה הוא מכיל: רשימה מסודרת של צמחי מרפא, התרופות שהם משפיעים עליהן, ורמת חומרת האינטראקציה (Interaction Severity).
+* איך מורידים: יוצרים חשבון Kaggle חינמי ומורידים את הקובץ ישירות ללפטופ דרך עמוד החיפוש: [Kaggle Open Datasets](https://www.kaggle.com/datasets?search=drug+inter) (חפש בתוך האתר את ה-Dataset הספציפי שנקרא Herb Drug Interaction שהועלה על ידי המשתמש Ganesh T V). [3] 
+
+## 3. מאגרי המאמרים הפתוחים של ה-NIH (לטובת RAG)
+אם אתה בונה מערכת RAG ומעדיף מסמכי טקסט מלאים (לעומת טבלאות) כדי שהמודל "יקרא" וישלוף מהם תשובות:
+
+* PubMed Central (PMC) Open Access: זהו חלק ממאגר המאמרים הרפואיים הרשמי של ממשלת ארה"ב, המכיל מאמרים שהם ברישיון חופשי לחלוטין (Creative Commons).
+* איך מורידים: ניתן להשתמש בכלי ההורדה החינמיים של הממשל כדי להוריד פסקאות ומאמרים שלמים בפורמט XML או טקסט נקי, תחת שאילתות החיפוש "Herb-Drug Interactions" או "Dietary Supplement Interactions".
+
+## 4. כלי בדיקה מקוונים וחינמיים (לשאיבת נתונים עצמאית)
+אם אתה מעדיף לבנות Dataset משלך באמצעות סריקת רשת (Web Scraping) חוקית לצרכי מחקר ואימון אישי:
+
+* [Medscape Drug Interactions Checker](https://reference.medscape.com/drug-interactionchecker): כלי מקוון וחינמי לחלוטין הפתוח לציבור הרחב. הוא מאפשר להזין שילובים של צמחים ותרופות ולקבל את תוצאת האינטראקציה על המסך. [4] 
+
+טיפ טכני לאימון ה-AI: אם המודל שלך צריך לעבוד בעברית, מומלץ לקחת את מאגרי ה-CSV/JSON החינמיים מאנגלית (כמו המאגר מ-Kaggle או GitHub), ולהעביר את עמודות הטקסט תרגום אוטומטי מסיבי (באמצעות API של תרגום) לעברית. זו הדרך המהירה ביותר ליצור מאגר אימון מובנה ואיכותי בשפה העברית.
+
+האם תרצה עזרה בכתיבת קוד פייתון קצר שיודע לטעון קובץ אינטראקציות כזה ולעבד אותו עבור מודל ה-AI שלך?
+
+[1] [https://github.com](https://github.com/ancnudde/HDIDataset)
+[2] [https://openbioinformaticsjournal.com](https://openbioinformaticsjournal.com/VOLUME/19/ELOCATOR/e18750362377947/FULLTEXT/)
+[3] [https://www.kaggle.com](https://www.kaggle.com/datasets?search=drug+inter)
+[4] [https://reference.medscape.com](https://reference.medscape.com/drug-interactionchecker)
